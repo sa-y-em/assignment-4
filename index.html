@@ -44,9 +44,9 @@
     <main>
 
         <div class="my-1.5 flex gap-2">
-            <button class="p-0.5 bg-white rounded-xl p-[5px]">All</button>
-            <button class="p-0.5 bg-white rounded-xl p-[5px]">Interview</button>
-            <button class="p-0.5 bg-white rounded-xl p-[5px]">Rejected</button>
+            <button class="p-0.5 bg-black text-white rounded-xl p-[5px]" onclick="toggle('all-button') " id="all-button">All </button>
+            <button id="interview-button" onclick="toggle('interview-button')" class="p-0.5 bg-white rounded-xl p-[5px]">Interview</button>
+            <button class="p-0.5 bg-white rounded-xl p-[5px]" id="rejected-button" onclick="toggle('rejected-button')">Rejected</button>
         </div>
         <div id="all-cards">
         <div class="card-1 border-1 text-gray-800 p-[8px] mb-2.5">
