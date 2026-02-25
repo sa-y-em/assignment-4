@@ -37,3 +37,28 @@ function toggle(id){
 
 
 }
+
+//select clicked item
+allCards.addEventListener('click',function(event){
+ const fullCardInfo = event.target.parentNode.parentNode;
+
+ 
+  const jobTitle = fullCardInfo.querySelector('.job-title').innerText;
+  const skill = fullCardInfo.querySelector('.skill').innerText;
+  const location = fullCardInfo.querySelector('.location').innerText;
+  const applyStatus = fullCardInfo.querySelector('.not-applied');
+  const discrib = fullCardInfo.querySelector('.discrib').innerText;
+  
+const singleCardInfo = {jobTitle,
+  skill,
+  location,
+  applyStatus,
+  discrib};
+
+  const interviewArrayExist = interviewArray.find(item=> item.jobTitle==singleCardInfo.jobTitle);
+  if(!interviewArrayExist){
+    interviewArray.push(singleCardInfo);
+  }
+  console.log(interviewArray)
+
+})
